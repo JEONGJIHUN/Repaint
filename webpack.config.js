@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// require("dotenv").config();
 
 const port = process.env.PORT || 8080;
 module.exports = {
@@ -40,6 +41,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html"
+      // naverMapsClientId: process.env.MAP_CLIENT_ID
       // favicon:'public/favicon.ico'
     })
   ],
