@@ -1,8 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import "./ButtonInContainer.less";
 
-const ButtonInContainer = ({ text }) => {
-  return <div className="ButtonInContainer">{text}</div>;
-};
+class ButtonInContainer extends Component {
+  render() {
+    const { text } = this.props;
+    return <div className="ButtonInContainer">{text}</div>;
+  }
+}
 
 export default ButtonInContainer;

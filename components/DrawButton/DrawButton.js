@@ -1,12 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import "./DrawButton.less";
 
-const DrawButton = ({ iconName, color }) => {
-  return (
-    <div className="DrawButton" style={{ backgroundColor: `${color}` }}>
-      {iconName}
-    </div>
-  );
-};
+class DrawButton extends Component {
+  render() {
+    const { iconName } = this.props;
+    return <div className="DrawButton">{iconName}</div>;
+  }
+}
 
 export default DrawButton;

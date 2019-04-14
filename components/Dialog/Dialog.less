@@ -1,22 +1,21 @@
+@shadowColor: rgba(0, 0, 0, 0.2);
+@titleContainerHeight: 50px;
 .Dialog {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  // z-index: 1;
-  width: 300px;
-  height: 800px;
   border-radius: 15px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  //   border: 2px solid red;
+  color: #fff;
+  box-shadow: 0 0px 20px @shadowColor;
   .titleContainer {
-    height: 50px;
+    height: @titleContainerHeight;
     background-color: rgb(77, 87, 172);
     text-align: center;
-    line-height: 50px;
+    font-weight: 700;
+    text-shadow: 0 1px 13px rgba(0, 0, 0, 1);
+    line-height: @titleContainerHeight;
     border-radius: 15px 15px 0 0;
   }
   .contextContainer {
-    height: 750px;
+    height: calc(100% - @titleContainerHeight);
     background-color: #fff;
     border-radius: 0 0 15px 15px;
   }
